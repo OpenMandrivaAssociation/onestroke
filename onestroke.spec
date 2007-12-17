@@ -11,7 +11,6 @@ Source:		http://www.missirina.com/risujin/%{name}-%{version}.tar.bz2
 URL:		http://www.missirina.com/risujin/onestroke.php
 License:	GPL
 Group:		Accessibility
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	ImageMagick
 BuildRequires:	gtk2-devel
 BuildRequires:  libxtst-devel
