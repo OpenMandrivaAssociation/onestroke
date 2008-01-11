@@ -38,10 +38,6 @@ mkdir -p %buildroot/%_datadir/pixmaps
 make install PREFIX=%buildroot/%_prefix
 
 #menu
-mkdir -p $RPM_BUILD_ROOT%{_menudir}
-cat << EOF > $RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(%{name}): command="%{name}" icon="%{name}.png" needs="x11" title="Onestroke" longtitle="Gesture text entry" section="More Applications/Accessibility" xdg="true"
-EOF
 
 desktop-file-install --vendor="" \
   --remove-category="Application" \
@@ -75,7 +71,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/applications/%name.desktop
 %{_datadir}/pixmaps/%name.png
 %{_datadir}/%name-0.8
-%{_menudir}/%name
 %{_liconsdir}/%name.png
 %{_iconsdir}/%name.png
 %{_miconsdir}/%name.png
