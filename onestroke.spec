@@ -12,7 +12,7 @@ URL:		http://www.missirina.com/risujin/onestroke.php
 License:	GPL
 Group:		Accessibility
 BuildRoot:	%{_tmppath}/%{name}-buildroot
-BuildRequires:	ImageMagick
+BuildRequires:	imagemagick
 BuildRequires:	gtk2-devel
 BuildRequires:  libxtst-devel
 BuildRequires:  desktop-file-utils
