@@ -1,15 +1,16 @@
 %define name	onestroke
-%define version	0.8.3
-%define release %mkrel 2
+%define version	0.8.4
+%define release %mkrel 1
 
 Name: 	 	%{name}
 Summary: 	Gesture recognition for tablet PC's
 Version: 	%{version}
 Release: 	%{release}
 
-Source:		http://www.missirina.com/risujin/%{name}-%{version}.tar.bz2
-URL:		http://www.missirina.com/risujin/onestroke.php
-License:	GPL
+Source:		http://pub.risujin.org/onestroke/%{name}-%{version}.tar.gz
+URL:		http://risujin.org/onestroke/
+Patch0:		%{name}-0.8.4-fix-overlinking.patch
+License:	GPLv2+
 Group:		Accessibility
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	imagemagick
@@ -25,6 +26,7 @@ sent to the currently focused window.
 
 %prep
 %setup -q %name-%version
+%patch0 -p1
 chmod 644 README *.png *.desktop
 
 %build
@@ -38,7 +40,7 @@ mkdir -p %buildroot/%_datadir/pixmaps
 make install PREFIX=%buildroot/%_prefix
 
 #menu
-
+sed -i "s/%{name}.png/%{name}/" %{buildroot}%{_datadir}/applications/%{name}.desktop
 desktop-file-install --vendor="" \
   --remove-category="Application" \
   --add-category="GTK" \
