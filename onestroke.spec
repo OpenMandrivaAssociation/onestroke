@@ -1,6 +1,6 @@
 %define name	onestroke
 %define version	0.8.4
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name: 	 	%{name}
 Summary: 	Gesture recognition for tablet PC's
