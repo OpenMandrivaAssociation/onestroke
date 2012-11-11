@@ -1,0 +1,12 @@
+diff -uNr onestroke-0.8.4.ori/Makefile onestroke-0.8.4/Makefile
+--- onestroke-0.8.4.ori/Makefile	2009-05-19 19:17:46.000000000 +0200
++++ onestroke-0.8.4/Makefile	2009-05-19 19:22:54.000000000 +0200
+@@ -7,7 +7,7 @@
+ 
+ CC=gcc
+ CFLAGS=-DOS_VERSION=\"${VERSION}\" -DOS_PROFDIR=\"${PROFDIR}\"
+-LDFLAGS=`pkg-config --libs gtk+-2.0` -lXtst -lm
++LDFLAGS=-lgtk-x11-2.0 -lgdk-x11-2.0 -lgdk_pixbuf-2.0 -lgobject-2.0 -lglib-2.0 -lXtst -lm
+ VERSION=0.8.4
+ OBJECTS=osGTK.o osUnix.o onestroke.o
+ 
