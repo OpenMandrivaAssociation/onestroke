@@ -8,7 +8,7 @@ Version: 	%{version}
 Release: 	%{release}
 
 Source:		http://pub.risujin.org/onestroke/%{name}-%{version}.tar.gz
-URL:		http://risujin.org/onestroke/
+URL:		https://risujin.org/onestroke/
 Patch0:		%{name}-0.8.4-fix-overlinking.patch
 License:	GPLv2+
 Group:		Accessibility
